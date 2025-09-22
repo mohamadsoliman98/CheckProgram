@@ -1,19 +1,38 @@
 workflows:
-  ios_bootstrap_and_build:
-    name: iOS Bootstrap & Build
+  ios_ipa_nosign:
+    name: iOS IPA (no codesign)
     max_build_duration: 60
     environment:
       flutter: stable
       xcode: latest
     scripts:
-      - name: Flutter bootstrap (create ios/ then get packages)
+      - name: Bootstrap Flutter project
         script: |
           flutter --version || true
           flutter create .
           flutter pub get
-      - name: Build iOS (no codesign)
+      - name: Build IPA (no codesign)
         script: |
-          flutter build ios --release --no-codesign
+          # يخرج ملف IPA غير موقّع
+          flutter build ipa --release --no-codesign
     artifacts:
       - build/ios/ipa/*.ipa
-      - build/ios/iphoneos/*.app
+
+  ios_ipa_autosign:
+    name: iOS IPA (Automatic signing via Codemagic)
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Bootstrap Flutter project
+        script: |
+          flutter --version || true
+          flutter create .
+          flutter pub get
+      - name: Build IPA (codesign enabled)
+        script: |
+          # يتطلب تفعيل Automatic code signing من واجهة Codemagic وربط Apple ID/ASC
+          flutter build ipa --release
+    artifacts:
+      - build/ios/ipa/*.ipa
