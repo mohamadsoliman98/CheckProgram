@@ -1,16 +1,17 @@
 workflows:
-  ios_build:
-    name: iOS Build
+  ios_bootstrap_and_build:
+    name: iOS Bootstrap & Build
+    max_build_duration: 60
     environment:
       flutter: stable
       xcode: latest
     scripts:
-      - name: Create Flutter project structure
+      - name: Flutter bootstrap (create ios/ then get packages)
         script: |
           flutter --version || true
           flutter create .
           flutter pub get
-      - name: Build iOS release
+      - name: Build iOS (no codesign)
         script: |
           flutter build ios --release --no-codesign
     artifacts:
