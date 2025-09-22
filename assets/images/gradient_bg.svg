@@ -1,0 +1,21 @@
+<svg width="360" height="434" viewBox="0 0 360 434" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5" filter="url(#filter0_f_306_619)">
+<ellipse cx="118.764" cy="119.162" rx="118.764" ry="119.162" transform="matrix(-1 0 0 1 227.564 -11)" fill="url(#paint0_linear_306_619)"/>
+<ellipse cx="112.196" cy="112.56" rx="112.196" ry="112.56" transform="matrix(-1 0 0 1 391 75.6971)" fill="#9FC6A3"/>
+<circle cx="155.18" cy="155.18" r="155.18" transform="matrix(-1 0 0 1 285.361 42.9126)" fill="#277EB8"/>
+<ellipse cx="77.226" cy="76.8617" rx="77.226" ry="76.8617" transform="matrix(-1 0 0 1 355.301 82.2539)" fill="#527756"/>
+<ellipse cx="77.226" cy="76.8617" rx="77.226" ry="76.8617" transform="matrix(-1 0 0 1 203.267 75.4)" fill="#78B07E"/>
+<ellipse cx="75.7689" cy="75.4046" rx="75.7689" ry="75.4046" transform="matrix(-1 0 0 1 299.932 40.7267)" fill="#67A5B3"/>
+</g>
+<defs>
+<filter id="filter0_f_306_619" x="-105" y="-91" width="576" height="524.273" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_306_619"/>
+</filter>
+<linearGradient id="paint0_linear_306_619" x1="118.764" y1="238.325" x2="197.097" y2="58.1333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#578AAC"/>
+<stop offset="1" stop-color="#233846"/>
+</linearGradient>
+</defs>
+</svg>
