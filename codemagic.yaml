@@ -1,0 +1,18 @@
+workflows:
+  ios_build:
+    name: iOS Build
+    environment:
+      flutter: stable
+      xcode: latest
+    scripts:
+      - name: Create Flutter project structure
+        script: |
+          flutter --version || true
+          flutter create .
+          flutter pub get
+      - name: Build iOS release
+        script: |
+          flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - build/ios/iphoneos/*.app
